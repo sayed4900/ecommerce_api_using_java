@@ -11,10 +11,10 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-//@Repository
+// when use @RequiredArgsConstructor, we should make any dependencies  FINIAL
 public class ProductServiceImpl implements ProductService {
 
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     @Override
     public Product addProduct(Product product) {
